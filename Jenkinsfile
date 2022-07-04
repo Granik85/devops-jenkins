@@ -60,7 +60,7 @@ pipeline {
                     artifactPath = filesByGlob[0].path;
                     // Assign to a boolean response verifying If the artifact name exists
                     artifactExists = fileExists artifactPath;
-                    def pom_d = pom.distributionManagement;
+                    def pom_d = pom.distributionManagement.getRepository();
                     echo pom_d;
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
