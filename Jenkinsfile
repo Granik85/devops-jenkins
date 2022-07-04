@@ -60,7 +60,8 @@ pipeline {
                     artifactPath = filesByGlob[0].path;
                     // Assign to a boolean response verifying If the artifact name exists
                     artifactExists = fileExists artifactPath;
-                    echo "${pom}"
+                    pom_d = pom.getProperties().getProperty("distributionManagement");
+                    echo $"{pom_d}";
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
 
