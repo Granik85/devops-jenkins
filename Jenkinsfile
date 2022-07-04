@@ -18,10 +18,7 @@ pipeline {
         NEXUS_REPOSITORY = "repository-jenkins-snp"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
-        //java_home = params.JAVA_VERSION_FOR_BUILD
-        // export JAVA_HOME
-        //JAVA_HOME = "${params.JAVA_VERSION_FOR_BUILD}"
-        //PATH="${params.JAVA_VERSION_FOR_BUILD}bin:${env.PATH}"
+
     }
 
     stages {
