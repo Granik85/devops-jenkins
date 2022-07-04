@@ -61,7 +61,7 @@ pipeline {
                     // Assign to a boolean response verifying If the artifact name exists
                     artifactExists = fileExists artifactPath;
                     def pom_d = pom.distributionManagement;
-                    echo $"{pom_d}";
+                    echo pom_d;
                     if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}";
 
